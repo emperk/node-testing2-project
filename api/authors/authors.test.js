@@ -40,7 +40,7 @@ describe('Authors model functions', () => {
       expect(author).toMatchObject({author_id: 1, ...author})
     })
   })
-  describe('[DELETE] / - deletes author', () => {
+  describe('[DELETE] - deletes author', () => {
     it('removes author from db', async () => {
       const [author_id] = await db('authors').insert(authorOne)
       let author = await db('authors').where({author_id}).first()
